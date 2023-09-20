@@ -12,6 +12,7 @@ export default function MenuListItem({ menuItem, handleAddToOrder }) {
           <button className="btn-sm" onClick={() => handleAddToOrder(menuItem._id)}>
             ADD
           </button>
+          
         </div>
       </div>
     );

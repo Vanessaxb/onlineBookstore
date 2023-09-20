@@ -18,7 +18,6 @@ export default function CreateBookForm({setUser}) {
     useEffect(() => {
       const fetchData = async () => {
         const data = await categoryApi.index()
-        // const categories = await data.json()
         console.log(data);
         setCategories(data)
 
@@ -34,26 +33,22 @@ export default function CreateBookForm({setUser}) {
       });
     };
 
+    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            
-    
+        try {              
              
           //calling user service signup function
           const item = await create(bookFormData)
           console.log('Item', item);
-          setUser(item)
+          
     
           console.log(bookFormData);
     
         } catch (error) {
           console.log(error);
-        //   setBookFormData({
-        //     ...bookFormData,
-        //     error: 'Creation Failed - Try Again'
-        //   });
-        }
+          }
       };
 
     return (
@@ -71,9 +66,9 @@ export default function CreateBookForm({setUser}) {
 
               <label>Category</label>
               <select name="category" onChange={handleChange}>
-                {categories && categories.map(cat => <option value={cat._id}>{cat.name}</option>)}
+                {categories && categories.map(cat => <option value={cat._id} key={cat._id}>{cat.name}</option>)}
               </select>             
-              
+                           
     
               <label>Description</label>
               <input type="text" name="description" value={bookFormData.description} onChange={handleChange} required />

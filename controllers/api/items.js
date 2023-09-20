@@ -46,8 +46,8 @@ async function create(req, res) {
 //update(edit) book
 async function update(req, res) {
   try{
-    const item = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true}); //! is this line correct?
-    res.status(200).json(item);
+    const updatedItem = await Item.findByIdAndUpdate(req.params.id, req.body, {new: true}); 
+    res.status(200).json(updatedItem);
   }catch(e){
     res.status(400).json({ msg: e.message });
   }  
@@ -56,8 +56,8 @@ async function update(req, res) {
 //delete book
 async function remove(req, res) {
   try{
-    const item = await Item.findByIdAndDelete(req.params.id); //! is this session correct?
-    res.status(200).json(item);
+    const deletedItem = await Item.findByIdAndDelete(req.params.id); //! is this session correct?
+    res.status(200).json(deletedItem);
   }catch(e){
     res.status(400).json({ msg: e.message });
   }  

@@ -11,10 +11,10 @@ router.get('/:id', itemsCtrl.show);
 //Get /api/items/create
 router.post('/', itemsCtrl.create)
 
-// //Get /api/items/update
-// router.put('/update', itemsCtrl.update)
+//Get /api/items/update
+router.put('/:id', itemsCtrl.update)
 
-// //Get /api/items/delete
-// router.delete('/delete', itemsCtrl.delete)
+//Get /api/items/delete
+router.delete('/:id', itemsCtrl.remove)
 
 module.exports = router;
