@@ -21,6 +21,10 @@ const userSchema = new Schema(
       minLength: 3,
       required: true,
     },
+    isAdmin: { //!is the right way to cleate an admin user?
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,

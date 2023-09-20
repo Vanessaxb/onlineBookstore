@@ -68,7 +68,7 @@ export default function CreateBookForm({setUser}) {
               <select name="category" onChange={handleChange}>
                 {categories && categories.map(cat => <option value={cat._id} key={cat._id}>{cat.name}</option>)}
               </select>             
-                           
+                         
     
               <label>Description</label>
               <input type="text" name="description" value={bookFormData.description} onChange={handleChange} required />
