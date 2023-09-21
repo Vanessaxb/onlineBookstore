@@ -1,6 +1,6 @@
 import styles from './CategoryList.module.css';
 
-export default function CategoryList({ categories, activeCat, setActiveCat }) {
+export default function CategoryList({ categories, cart, activeCat, setActiveCat }) {
   const cats = categories.map(cat =>
     <li
       key={cat}
@@ -14,6 +14,12 @@ export default function CategoryList({ categories, activeCat, setActiveCat }) {
   );
   return (
     <ul className={styles.CategoryList}>
+      <li
+        className={!activeCat ? styles.active : ''}
+        onClick={() => setActiveCat('')}
+      >
+        Show All
+      </li>
       {cats}
     </ul>
   );

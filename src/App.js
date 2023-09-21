@@ -8,6 +8,7 @@ import EditBookPage from './pages/EditBookPage'
 import MenuListItem from './components/MenuListItem/MenuListItem';
 import AllUsersPage from './pages/AllUsersPage'
 import EditUsersPage from './pages/EditUsersPage';
+import HomePage from './pages/HomePage';
 
 import OrderHIstoryPage from './pages/OrderHistoryPage';
 import NavBar from './components/NavBar';
@@ -30,6 +31,8 @@ function App() {
       <NavBar user={user} setUser={setUser}/>
         <Routes>
 
+          {/* <Route path='/orders/new' element={<HomePage user={user} setUser={setUser}/>}/> */}
+          
           <Route path='/orders/new' element={<NewOrderPage user={user} setUser={setUser}/>}/>
 
           <Route path='/orders' element={<OrderHIstoryPage user={user} setUser={setUser}/>}/>

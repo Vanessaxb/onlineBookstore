@@ -16,7 +16,7 @@ export default function MenuList({ menuItems, handleAddToOrder, user }) {
       console.log(item);
       await remove(item);
       navigate("/new") //! make it to go to another refresh page
-  // !can I send message "Booke deleted successfully!"?
+  // !can I send message "Book deleted successfully!"?
     } catch (error) {
       console.error('Error deleting item:', error);
     }

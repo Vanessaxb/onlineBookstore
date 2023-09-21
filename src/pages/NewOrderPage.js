@@ -24,7 +24,7 @@ export default function NewOrderPage({ user, setUser }) {
         return cats.includes(cat) ? cats : [...cats, cat];
       }, []);
       setMenuItems(items);
-      setActiveCat(categoriesRef.current[0]);
+      // setActiveCat(categoriesRef.current[0]);
     }
     getItems();
     async function getCart() {
@@ -60,6 +60,7 @@ export default function NewOrderPage({ user, setUser }) {
         <CategoryList
           categories={categoriesRef.current}
           cart={setCart}
+          activeCat={activeCat}
           setActiveCat={setActiveCat}
         />
         <Link to="/orders" className="button btn-sm">PREVIOUS ORDERS</Link>
@@ -67,7 +68,7 @@ export default function NewOrderPage({ user, setUser }) {
         <UserLogOut user={user} setUser={setUser} />
       </aside>
       <MenuList
-        menuItems={menuItems.filter(item => item.category.name === activeCat)}
+        menuItems={activeCat ? menuItems.filter(item => item.category.name === activeCat) : menuItems}
         handleAddToOrder={handleAddToOrder} 
         user={user}
       />
