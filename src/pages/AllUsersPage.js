@@ -44,9 +44,11 @@ export default function AllUsersPage({ user }) {
               Password: ******
               <br/>
               IsAdmin: {user.isAdmin ? 'Yes' : 'No'}
+              <br/>
+              Id: {user._id}
 
-              {!user.isAdmin && 
-              <Link to={`/users/${user._id}/update`} user={user} className="button btn-sm">Update User</Link>}
+              
+              <Link to={`/users/${user._id}/update`} user={user} className="button btn-sm">Update User</Link>
               
               {!user.isAdmin && 
                 <Link to="" onClick={ () => handleDelete(user._id)} user={user} className="button btn-sm">Delete User</Link>}

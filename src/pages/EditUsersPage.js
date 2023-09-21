@@ -2,17 +2,33 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { update, getUserById } from "../utilities/users-api";
 
-export default function EditUsersPage({ setUser }) {
+export default function EditUsersPage({ user }) {
   const { id } = useParams();
+
+//   console.log(user);
   const navigate = useNavigate();
-  const [userFormData, setUserFormData] = useState(null);
+
+  const [userFormData, setUserFormData] = useState( 
+    {
+    name: user.name,
+    email: user.email,
+    isAdmin: user.isAdmin, // Assuming isAdmin is a boolean
+  }
+  ); //! is this line that's causing the problem?
 
   useEffect(() => {
     const fetchUser = async () => {
-      const userData = await getUserById(id);
-      console.log(userData);
-      setUserFormData(userData);
-    };
+        try {
+            const response = await getUserById(id);
+            console.log("API Response:", response);
+            const userData = await response.json();
+            console.log("User Data:", userData);
+            setUserFormData(userData);
+        } catch (error) {
+          console.error("Error fetching user data:", error);
+        }
+      };
+    
     fetchUser();
   }, []);
 
@@ -23,8 +39,10 @@ export default function EditUsersPage({ setUser }) {
     });
   };
 
+  console.log(userFormData);
+
   const handleSubmit = async (e) => {
-    // e.preventDefault()
+    e.preventDefault()
     try {
         const updatedUser = await update(id, userFormData)
 
@@ -58,11 +76,11 @@ export default function EditUsersPage({ setUser }) {
 
             <label>IsAdmin</label>
             <input
-              type="text"
-              name="email"
-              defaultValue={userFormData?.isAdmin}
+              type="checkbox"
+              name="isAdmin"
+              defaultValue={userFormData?.isAdmin? 'true' : 'false'}
               onChange={handleChange}
-              required
+              
             />
 
             <button type="submit">Update</button>

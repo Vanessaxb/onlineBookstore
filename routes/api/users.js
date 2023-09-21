@@ -6,8 +6,8 @@ const router = express.Router();
 // GET /api/users
 router.get('/', usersCtrl.index); 
 
-// // GET /api/users/:id
-// router.get('/:id', usersCtrl.show);
+// GET /api/users/:id
+router.get('/:id', usersCtrl.show);
 
 // POST /api/users
 router.post('/', usersCtrl.create);

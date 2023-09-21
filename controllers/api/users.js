@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 
 module.exports = { 
   index, 
+  show,
   create, 
   update,
   remove,  
@@ -23,6 +24,16 @@ async function index(req, res) {
     console.log(err);
     res.status(400).json(err);
   }
+}
+
+//Show. Find user By Id
+async function show(req, res) {
+  try{
+    const user = await User.findById(req.params.id);
+    res.status(200).json(user);
+  }catch(e){
+    res.status(400).json({ msg: e.message });
+  }  
 }
 
 //create new user in the database
