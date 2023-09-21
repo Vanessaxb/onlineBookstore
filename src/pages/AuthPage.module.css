@@ -5,6 +5,10 @@
     align-items: center;
     background-color: var(--white);
     border-radius: 2vmin;
+    background-image: url('../images/libraryBackground.jpeg');
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-size: cover; /* Optionally, scale the background image to cover the container */
+    background-position: center; /* Optionally, center the background image */
   }
   
   .AuthPage h3 {
