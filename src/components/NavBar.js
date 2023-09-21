@@ -17,7 +17,10 @@ function NavBar({ user, setUser }) {
       <Link to="" onClick={handleLogout}>Log out</Link>
       &nbsp; | &nbsp;
       {user.isAdmin &&
-      <Link to="/items">Create New Book</Link>}
+      <Link to="/items/new">Create New Book</Link>}
+      &nbsp; | &nbsp;
+      {user.isAdmin &&
+      <Link to="/users">Users</Link>}
       
       
 

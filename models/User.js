@@ -21,7 +21,7 @@ const userSchema = new Schema(
       minLength: 3,
       required: true,
     },
-    isAdmin: { //!is the right way to cleate an admin user?
+    isAdmin: { 
       type: Boolean,
       default: false,
     },
@@ -39,7 +39,7 @@ const userSchema = new Schema(
   }
 );
 
-//everytime a user is created oand when the password is updated, the password gets hashed
+//everytime a user is created or/and when the password is updated, the password gets hashed
 userSchema.pre('save', async function(next) {
   // 'this' is the user doc //we check if password has been modified
   if (!this.isModified('password')) return next();

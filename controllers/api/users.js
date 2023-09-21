@@ -2,6 +2,27 @@ const User = require("../../models/User");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
+module.exports = { 
+  index, 
+  create,   
+  login, 
+  checkToken };
+
+
+//Index view user
+async function index(req, res) {
+  try {
+    const users =  await User.find({})
+    res.json(users)
+  }  catch (err) {
+    // Client will check for non-2xx status code
+    // 400 = Bad Request
+    console.log(err);
+    res.status(400).json(err);
+  }
+}
+
+
 //create new user in the database
 async function create(req, res) {
   try {
@@ -55,4 +76,4 @@ function createJWT(user) {
   );
 }
 
-module.exports = { create, login, checkToken };
+

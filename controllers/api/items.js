@@ -56,7 +56,7 @@ async function update(req, res) {
 //delete book
 async function remove(req, res) {
   try{
-    const deletedItem = await Item.findByIdAndDelete(req.params.id); //! is this session correct?
+    const deletedItem = await Item.findByIdAndDelete(req.params.id); 
     res.status(200).json(deletedItem);
   }catch(e){
     res.status(400).json({ msg: e.message });

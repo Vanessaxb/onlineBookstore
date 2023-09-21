@@ -9,7 +9,7 @@ router.get('/', itemsCtrl.index);
 router.get('/:id', itemsCtrl.show);
 
 //Get /api/items/create
-router.post('/', itemsCtrl.create)
+router.post('/', itemsCtrl.create) //! check and adjjust these routes accoridng to final design
 
 //Get /api/items/update
 router.put('/:id', itemsCtrl.update)
