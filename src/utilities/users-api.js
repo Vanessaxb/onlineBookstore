@@ -11,6 +11,11 @@ export function getAllUsers() {
   return sendRequest(BASE_URL, "GET" )
 }
 
+//delete user
+export function remove(id) {
+  return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+}
+
 export function login(credentials) {
   return sendRequest(`${BASE_URL}/login`, "POST", credentials);
 }

@@ -1,10 +1,24 @@
 import { useState, useEffect } from "react";
 import { getAllUsers } from "../utilities/users-api";
 import styles from './EditUsersPage.module.css'
+import { Link, useNavigate} from 'react-router-dom'
+import {remove} from '../utilities/users-api'
 
 export default function EditUsersPage({ user }) {
   const [users, setUsers] = useState(null);
   console.log(users);
+
+  const navigate = useNavigate()
+
+  const handleDelete = async (user) => {
+    try {
+        await remove(user)
+        // navigate('/users', { replace: true })
+        window.location.reload()
+    } catch (error) {
+        console.error('Error deleting user:', error);
+      }
+  }
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -23,11 +37,16 @@ export default function EditUsersPage({ user }) {
         users.map((user) => {
           return (
             <ul key={user._id}>
-              {user.name}
+              Name: {user.name}
+              <br/>
+              Email: {user.email}
+              <br/>
+              Password: ******
+              <br/>
+              IsAdmin: {user.isAdmin ? 'Yes' : 'No'}
 
-              {user.email}
-              {user.password}
-              {user.isAdmin}
+              {!user.isAdmin && 
+                <Link to="" onClick={ () => handleDelete(user._id)} user={user} className="button btn-sm">Delete User</Link>}
             </ul>
           );
         })}

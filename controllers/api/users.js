@@ -4,9 +4,11 @@ const bcrypt = require("bcrypt");
 
 module.exports = { 
   index, 
-  create,   
+  create, 
+  remove,  
   login, 
-  checkToken };
+  checkToken
+};
 
 
 //Index view user
@@ -21,7 +23,6 @@ async function index(req, res) {
     res.status(400).json(err);
   }
 }
-
 
 //create new user in the database
 async function create(req, res) {
@@ -39,6 +40,17 @@ async function create(req, res) {
     res.status(400).json(err);
   }
 }
+
+//remove user from DB
+async function remove(req, res) {
+  try{
+    const deleteUser = await User.findByIdAndDelete(req.params.id)
+    res.status(200).json(deleteUser)
+  }catch(e){
+    res.status(400).json({ msg: e.message });
+  } 
+}
+
 
 async function login(req, res) {
   try {
