@@ -6,7 +6,8 @@ import {Routes, Route, Navigate} from 'react-router-dom'
 import CreateBookPage from './pages/CreateBookPage'
 import EditBookPage from './pages/EditBookPage'
 import MenuListItem from './components/MenuListItem/MenuListItem';
-import EditUsersPage from './pages/EditUsersPage'
+import AllUsersPage from './pages/AllUsersPage'
+import EditUsersPage from './pages/EditUsersPage';
 
 import OrderHIstoryPage from './pages/OrderHistoryPage';
 import NavBar from './components/NavBar';
@@ -34,6 +35,8 @@ function App() {
           <Route path='/orders' element={<OrderHIstoryPage user={user} setUser={setUser}/>}/>
           
           <Route path='/items/new' element={<CreateBookPage user={user} setUser={setUser}/>}/>
+
+          <Route path='/users' element={<AllUsersPage user={user} setUser={setUser}/>}/>
 
           <Route path='/users' element={<EditUsersPage user={user} setUser={setUser}/>}/>
 

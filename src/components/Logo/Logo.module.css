@@ -1,13 +1,25 @@
 .Logo {
-    height: 12vmin;
-    width: 12vmin;
+    height: 15vmin;
+    width: 15vmin;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
+    padding-top: 10px;
     border-radius: 50%;
-    background-color: var(--blue);
+    background-image: url('../../images/libraryBackground.jpeg');
     color: var(--tan-1);
     font-size: 2.7vmin;
     border: .6vmin solid var(--tan-2);
-    }
+    position: relative;
+    z-index: 2;    
+    
+
+}
+    Create a transparent purple background layer
+    .LogoText {
+        background-color: rgba(128, 0, 128, 0.5); /* Transparent purple background for text */
+        padding: 10px; /* Adjust padding as needed */
+        border-radius: 5px; /* Add border-radius to round the corners of the background box */
+        
+    } 

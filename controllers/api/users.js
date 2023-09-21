@@ -5,6 +5,7 @@ const bcrypt = require("bcrypt");
 module.exports = { 
   index, 
   create, 
+  update,
   remove,  
   login, 
   checkToken
@@ -39,6 +40,16 @@ async function create(req, res) {
     console.log(err);
     res.status(400).json(err);
   }
+}
+
+//update(edit) user
+async function update(req, res) {
+  try{
+    const updatedUser = await User.findByIdAndUpdate(req.params.id, req.body, {new: true}); 
+    res.status(200).json({ msg: 'User has been Updated', user: updatedUser});
+  }catch(e){
+    res.status(400).json({ msg: e.message });
+  }  
 }
 
 //remove user from DB

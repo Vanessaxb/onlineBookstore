@@ -1,55 +1,74 @@
 import { useState, useEffect } from "react";
-import { getAllUsers } from "../utilities/users-api";
-import styles from './EditUsersPage.module.css'
-import { Link, useNavigate} from 'react-router-dom'
-import {remove} from '../utilities/users-api'
+import { useParams, useNavigate } from "react-router-dom";
+import { update, getUserById } from "../utilities/users-api";
 
-export default function EditUsersPage({ user }) {
-  const [users, setUsers] = useState(null);
-  console.log(users);
-
-  const navigate = useNavigate()
-
-  const handleDelete = async (user) => {
-    try {
-        await remove(user)
-        // navigate('/users', { replace: true })
-        window.location.reload()
-    } catch (error) {
-        console.error('Error deleting user:', error);
-      }
-  }
+export default function EditUsersPage({ setUser }) {
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [userFormData, setUserFormData] = useState(null);
 
   useEffect(() => {
-    const fetchUsers = async () => {
-      const usersData = await getAllUsers();
-      console.log(usersData);
-      setUsers(usersData);
+    const fetchUser = async () => {
+      const userData = await getUserById(id);
+      console.log(userData);
+      setUserFormData(userData);
     };
-    fetchUsers();
+    fetchUser();
   }, []);
 
-  return (
-    <main className={styles.EditUsersPage}>
-      <h1>Users page</h1>
-      <ul className="users-show"></ul>
-      {users &&
-        users.map((user) => {
-          return (
-            <ul key={user._id}>
-              Name: {user.name}
-              <br/>
-              Email: {user.email}
-              <br/>
-              Password: ******
-              <br/>
-              IsAdmin: {user.isAdmin ? 'Yes' : 'No'}
+  const handleChange = (e) => {
+    setUserFormData({
+      ...userFormData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-              {!user.isAdmin && 
-                <Link to="" onClick={ () => handleDelete(user._id)} user={user} className="button btn-sm">Delete User</Link>}
-            </ul>
-          );
-        })}
-    </main>
+  const handleSubmit = async (e) => {
+    // e.preventDefault()
+    try {
+        const updatedUser = await update(id, userFormData)
+
+    } catch (error) {
+        console.log(error);
+    }
+  }
+
+  return (
+    <div>
+      {userFormData && (
+        <div className="userForm-container">
+          <form autoComplete="off" onSubmit={handleSubmit}>
+            <label>Name</label>
+            <input
+              type="text"
+              name="name"
+              defaultValue={userFormData?.name}
+              onChange={handleChange}
+              required
+            />
+
+            <label>Email</label>
+            <input
+              type="text"
+              name="email"
+              defaultValue={userFormData?.email}
+              onChange={handleChange}
+              required
+            />
+
+            <label>IsAdmin</label>
+            <input
+              type="text"
+              name="email"
+              defaultValue={userFormData?.isAdmin}
+              onChange={handleChange}
+              required
+            />
+
+            <button type="submit">Update</button>
+          </form>
+        </div>
+      )}
+    </div>
   );
 }

@@ -2,6 +2,7 @@
 import {create} from '../utilities/items-api'
 import * as categoryApi from '../utilities/category-api'
 import { useState, useEffect } from 'react';
+import {useNavigate} from 'react-router-dom'
 
 export default function CreateBookForm({setUser}) {
     const [bookFormData, setBookFormData] = useState({
@@ -15,12 +16,14 @@ export default function CreateBookForm({setUser}) {
 
     const [categories, setCategories] = useState(null)
 
+    const navigate = useNavigate()
+
     useEffect(() => {
       const fetchData = async () => {
         const data = await categoryApi.index()
         console.log(data);
         setCategories(data)
-
+        
       }  
       fetchData()    
     }, [])
@@ -30,10 +33,9 @@ export default function CreateBookForm({setUser}) {
           ...bookFormData,
           [e.target.name]: e.target.value,
           
-      });
-    };
-
-    
+        });
+        
+    };    
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -42,7 +44,7 @@ export default function CreateBookForm({setUser}) {
           //calling user service signup function
           const item = await create(bookFormData)
           console.log('Item', item);
-          
+          navigate('/new')
     
           console.log(bookFormData);
     
