@@ -2,7 +2,7 @@ import styles from './MenuList.module.css';
 import MenuListItem from '../MenuListItem/MenuListItem';
 import { Link, useNavigate } from 'react-router-dom';
 import {remove} from '../../utilities/items-api'
-
+import { toast } from 'react-toastify';
 
 
 
@@ -15,8 +15,17 @@ export default function MenuList({ menuItems, handleAddToOrder, user }) {
     try {
       console.log(item);
       await remove(item);
-      navigate("/new") //! make it to go to another refresh page
-  // !can I send message "Book deleted successfully!"?
+      toast.success('Book Deleted Successfuly!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+      navigate("/new") 
     } catch (error) {
       console.error('Error deleting item:', error);
     }
@@ -28,15 +37,13 @@ export default function MenuList({ menuItems, handleAddToOrder, user }) {
       handleAddToOrder={handleAddToOrder}
       menuItem={item}
       />
-      {/* {user.isAdmin && 
-      <Link to={`/items/${item._id}/update`} item={item} className="button btn-sm">Create Book</Link>} */}
-
+      <div className='buttons'>
       {user.isAdmin && 
       <Link to={`/items/${item._id}/update`} item={item} className="button btn-sm">Update Book</Link>}
       
       {user.isAdmin && 
       <Link to="" onClick={ () => handleDelete(item._id)} item={item} className="button btn-sm">Delete Book</Link>}
-      
+      </div>
       </div>
       ));
 

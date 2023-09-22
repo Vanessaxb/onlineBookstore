@@ -17,3 +17,10 @@
     color: var(--text-light);
     cursor: pointer;
   }
+
+  .AuthPage h1 {
+    color: var(--white);
+    font-size: 60px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+  }

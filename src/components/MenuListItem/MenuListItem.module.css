@@ -1,9 +1,11 @@
 .MenuListItem {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 3vmin;
+    margin-top: 2vmin;
+    margin-bottom: -1.6vmin;
     padding: 2vmin;
     color: var(--text-light);
     background-color: var(--white);
@@ -23,13 +25,14 @@
   
   .MenuListItem .buy {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
   
   .MenuListItem .buy span {
     font-size: 1.7vw;
     text-align: center;
     color: var(--text-light);
+    margin-top: 1vw;
   }
   
   .MenuListItem .name {

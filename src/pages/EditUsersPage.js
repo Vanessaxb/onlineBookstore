@@ -1,36 +1,36 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { update, getUserById } from "../utilities/users-api";
+import { toast } from 'react-toastify';
 
-export default function EditUsersPage({ user }) {
+export default function EditUsersPage() {
   const { id } = useParams();
 
-//   console.log(user);
+  //   console.log(user);
   const navigate = useNavigate();
 
-  const [userFormData, setUserFormData] = useState( 
-    {
-    name: user.name,
-    email: user.email,
-    isAdmin: user.isAdmin, // Assuming isAdmin is a boolean
-  }
-  ); //! is this line that's causing the problem?
+  
+
+  const [userFormData, setUserFormData] = useState({
+    name: "",
+    email: "",
+    isAdmin: "",
+  });
 
   useEffect(() => {
     const fetchUser = async () => {
-        try {
-            const response = await getUserById(id);
-            console.log("API Response:", response);
-            const userData = await response.json();
-            console.log("User Data:", userData);
-            setUserFormData(userData);
-        } catch (error) {
-          console.error("Error fetching user data:", error);
-        }
-      };
-    
+      try {
+        const userData = await getUserById(id);
+        console.log("API Response:", userData);
+        console.log("User Data:", userData);
+        setUserFormData(userData);
+      } catch (error) {
+        console.error("Error fetching user data:", error);
+      }
+    };
+
     fetchUser();
-  }, []);
+  }, [id]);
 
   const handleChange = (e) => {
     setUserFormData({
@@ -42,14 +42,24 @@ export default function EditUsersPage({ user }) {
   console.log(userFormData);
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
-        const updatedUser = await update(id, userFormData)
-
+      const updatedUser = await update(id, userFormData);
+      toast.success('User Upated Successfuly!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+      navigate("/users");
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-  }
+  };
 
   return (
     <div>
@@ -78,13 +88,13 @@ export default function EditUsersPage({ user }) {
             <input
               type="checkbox"
               name="isAdmin"
-              defaultValue={userFormData?.isAdmin? 'true' : 'false'}
+              defaultValue={userFormData?.isAdmin ? "true" : "false"}
               onChange={handleChange}
-              
             />
 
             <button type="submit">Update</button>
           </form>
+         
         </div>
       )}
     </div>

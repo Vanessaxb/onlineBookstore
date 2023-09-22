@@ -1,12 +1,12 @@
 :root {
   --white: #FFFFFF;
-  --tan-1: #FFFFFF;
+  --purple-1: #7310ad;
   --tan-2: #FFFFFF;
   --tan-3: #FFFFFF;
   --tan-4: #D3C1AE;
   --blue: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
+  --text-light: #57146f;
+  --text-dark: #be380b;
 }
 
 *, *:before, *:after {
@@ -20,7 +20,7 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--tan-4);
+  background-color: var(--white);
   padding: 2vmin;
   height: 100vh;
 }
@@ -78,9 +78,9 @@ code {
 }
 
 .form-container {
-  padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  padding: 3vmin;  
+  background-color: rgba(255, 255, 255, 0.5); /*background tranparetn white*/
+  border: .1vmin solid var(--purple-1);
   border-radius: 1vmin;
 }
 
@@ -94,6 +94,12 @@ form {
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
   color: var(--text-light);
+  
+}
+
+form * {
+  font-weight: bold; /* Make all text elements inside the form bold */
+  font-size: 1.4em !important;
 }
 
 label {
@@ -105,11 +111,11 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--tan-3);
+  border: .1vmin solid var(--purple-1);
   border-radius: .5vmin;
   color: var(--text-dark);
-  background-image: url('./images/libraryBackground.jpeg'); /* prevent lastpass */
-  outline: none;
+  /* background-image: url('./images/libraryBackground.jpeg'); prevent lastpass */
+  outline: var(--tan-1);
 }
 
 input:focus {

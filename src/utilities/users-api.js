@@ -1,6 +1,7 @@
 import { getToken } from "./users-service";
 import sendRequest from "./send-request";
 
+
 const BASE_URL = "/api/users";
 
 
@@ -11,7 +12,7 @@ export function getAllUsers() {
 
 //Show. Get Users by ID
 export function getUserById(id) {
-  return sendRequest(`${BASE_URL}/${id}`)
+  return sendRequest(`${BASE_URL}/${id}`, 'GET') //!is this correct?
 }
 
 //Update user

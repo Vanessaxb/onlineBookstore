@@ -8,22 +8,19 @@ function NavBar({ user, setUser }) {
   };
 
   return (
-    <nav>
-      <h2>Welcome, {user.name}</h2>
-      <Link to="/orders/new">New Order</Link>
+    <nav className="navbar">
+      <h2 className="navbar-title">Welcome, {user.name}</h2>
+      <Link to="/orders/new" className="navbar-link">Home</Link>
       &nbsp; | &nbsp;
-      <Link to="/orders">Order History</Link>
+      <Link to="/orders" className="navbar-link">Order History</Link>
       &nbsp; | &nbsp;
-      <Link to="" onClick={handleLogout}>Log out</Link>
-      &nbsp; | &nbsp;
-      {user.isAdmin &&
-      <Link to="/items/new">Create New Book</Link>}
+      <Link to="" onClick={handleLogout} className="navbar-link">Log out</Link>
       &nbsp; | &nbsp;
       {user.isAdmin &&
-      <Link to="/users">Users</Link>}
-      
-      
-
+      <Link to="/items/new" className="navbar-link">Create New Book</Link>}
+      &nbsp; | &nbsp;
+      {user.isAdmin &&
+      <Link to="/users" className="navbar-link">Users</Link>}
     </nav>
   );
 }

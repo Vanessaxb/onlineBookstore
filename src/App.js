@@ -8,13 +8,16 @@ import EditBookPage from './pages/EditBookPage'
 import MenuListItem from './components/MenuListItem/MenuListItem';
 import AllUsersPage from './pages/AllUsersPage'
 import EditUsersPage from './pages/EditUsersPage';
-import HomePage from './pages/HomePage';
+
 
 import OrderHIstoryPage from './pages/OrderHistoryPage';
 import NavBar from './components/NavBar';
 import { getUser } from './utilities/users-service';
 import styles from './App.module.css';
 import MenuList from './components/MenuList/MenuList';
+
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -56,7 +59,7 @@ function App() {
 
         : <AuthPage setUser={setUser}/> }
       
-      
+      <ToastContainer/>
     </main>
   );
 }
