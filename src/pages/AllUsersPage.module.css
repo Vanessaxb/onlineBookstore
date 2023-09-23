@@ -1,0 +1,15 @@
+/* AllUsersPage.module.css */
+.AllUsersPage {
+    padding: 3vmin;
+    color: var(--purple-1);
+  }
+  
+  .AllUsersPage h1 {
+    font-size: 3vmin;
+    margin-bottom: 2vmin;
+    color: var(--blue);
+  }
+
+  
+  
+  

@@ -1,6 +1,6 @@
+import styles from './AllUsersPage.module.css'
 import { useState, useEffect } from "react";
 import { getAllUsers } from "../utilities/users-api";
-import styles from './EditUsersPage.module.css'
 import { Link, useNavigate} from 'react-router-dom'
 import {remove} from '../utilities/users-api'
 
@@ -30,8 +30,8 @@ export default function AllUsersPage({ user }) {
   }, []);
 
   return (
-    <main className={styles.EditUsersPage}>
-      <h1>Users page</h1>
+    <main className={styles.AllUsersPage}>
+      <h1>Users</h1>
       <ul className="users-show"></ul>
       {users &&
         users.map((user) => {
@@ -45,13 +45,14 @@ export default function AllUsersPage({ user }) {
               <br/>
               IsAdmin: {user.isAdmin ? 'Yes' : 'No'}
               <br/>
-              Id: {user._id}
-
+              <br/>
               
-              <Link to={`/users/${user._id}/update`} user={user} className="button btn-sm">Update User</Link>
+              <div className="adminButtons">
+              <Link to={`/users/${user._id}/update`} user={user} className="btn-sma">Update User</Link>
               
               {!user.isAdmin && 
-                <Link to="" onClick={ () => handleDelete(user._id)} user={user} className="button btn-sm">Delete User</Link>}
+                <Link to="" onClick={ () => handleDelete(user._id)} user={user} className="btn-sma">Delete User</Link>}
+            </div>         
             </ul>
           );
         })}

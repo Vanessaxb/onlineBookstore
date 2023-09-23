@@ -80,7 +80,7 @@ code {
   background-color: rgba(255, 255, 255, 0.5); /*background tranparetn white*/
   border: .1vmin solid var(--purple-1);
   border-radius: 1vmin;
-  margin-left: 20mvin;
+  /* margin-left: 20mvin; */
 }
 
 p.error-message {
@@ -96,12 +96,21 @@ form {
   display: flex;
   flex-direction: column; /* Stack forms vertically */
   align-self: flex-end; 
+  max-width: 60%; 
+  margin-top: 4vmin;
+  margin-left: 20vmin;
+  padding: 2vmin; 
+  background-color: var(--tan-4); /*background tranparetn white*/
+  border: .1vmin solid var(--tan-3);
+  border-radius: 1vmin;
 }
 
 form * {
   font-weight: bold; /* Make all text elements inside the form bold */
   font-size: 1.4em !important;
+  
 }
+
 
 label {
   font-size: 2vmin;
@@ -112,15 +121,20 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--purple-1);
+  border: .1vmin solid var(--blue);
   border-radius: .5vmin;
   color: var(--text-dark);
-  /* background-image: url('./images/libraryBackground.jpeg'); prevent lastpass */
   outline: var(--tan-1);
 }
 
 input:focus {
   border-color: var(--blue);
+}
+
+.checkbox-container {
+  display: flex;
+  justify-content: space-between; /* Place elements on the same line with space in between */
+  align-items: center; /* Vertically align the checkbox and label */
 }
 
 button, a.button {
@@ -179,3 +193,4 @@ button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }
+

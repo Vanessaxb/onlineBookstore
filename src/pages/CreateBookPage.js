@@ -1,9 +1,8 @@
-// import LineItem from '../components/LineItem/LineItem';
 import { create } from "../utilities/items-api";
 import * as categoryApi from "../utilities/category-api";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 export default function CreateBookForm({ setUser }) {
   const [bookFormData, setBookFormData] = useState({
@@ -41,7 +40,7 @@ export default function CreateBookForm({ setUser }) {
       //calling user service signup function
       const item = await create(bookFormData);
       console.log("Item", item);
-      toast.success('Book Created Successfuly!', {
+      toast.success("Book Created Successfuly!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -50,7 +49,7 @@ export default function CreateBookForm({ setUser }) {
         draggable: true,
         progress: undefined,
         theme: "colored",
-        });
+      });
       navigate("/new");
 
       console.log(bookFormData);
@@ -61,7 +60,7 @@ export default function CreateBookForm({ setUser }) {
 
   return (
     <div>
-      <div className="bookForm-container">
+      <div className="bookFormContainer">
         <form autoComplete="off" onSubmit={handleSubmit}>
           <label>Title</label>
           <input

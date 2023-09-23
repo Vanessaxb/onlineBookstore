@@ -1,15 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { update, getUserById } from "../utilities/users-api";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 export default function EditUsersPage() {
   const { id } = useParams();
 
-  //   console.log(user);
   const navigate = useNavigate();
-
-  
 
   const [userFormData, setUserFormData] = useState({
     name: "",
@@ -45,7 +42,7 @@ export default function EditUsersPage() {
     e.preventDefault();
     try {
       const updatedUser = await update(id, userFormData);
-      toast.success('User Upated Successfuly!', {
+      toast.success("User Upated Successfuly!", {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -54,7 +51,7 @@ export default function EditUsersPage() {
         draggable: true,
         progress: undefined,
         theme: "colored",
-        });
+      });
       navigate("/users");
     } catch (error) {
       console.log(error);
@@ -84,17 +81,18 @@ export default function EditUsersPage() {
               required
             />
 
-            <label>IsAdmin</label>
+            <label>Is Admin?</label>
+            <div className="checkbox-container">
             <input
               type="checkbox"
               name="isAdmin"
               defaultValue={userFormData?.isAdmin ? "true" : "false"}
               onChange={handleChange}
             />
+            </div>
 
             <button type="submit">Update</button>
           </form>
-         
         </div>
       )}
     </div>
