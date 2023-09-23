@@ -1,12 +1,15 @@
 .MenuList {
-    background-color: var(--tan-1);
-    border: .1vmin solid var(--tan-3);
-    border-radius: 2vmin;
-    margin: 3vmin 0;
-    padding: 3vmin;
-    overflow-y: scroll;
-    }
+  background-color: var(--tan-1);
+  border: 0.1vmin solid var(--tan-3);
+  border-radius: 2vmin;
+  margin: 3vmin 0;
+  padding: 3vmin;
+  overflow-y: scroll;
+}
 
-/* .MenuList .buttons {
-    margin-top: -100px !important;
-} */
+.menu-item {
+  width: 45%; /* Set a fixed width for each book item */
+  margin: 1%; /* Add some margin between items */
+  display: inline-block; /* Display items inline to form rows */
+  vertical-align: top; /* Align items to the top of their container */
+}

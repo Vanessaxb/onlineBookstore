@@ -1,7 +1,8 @@
 .AuthPage {
-    height: 100%;
+    height: 100vh;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--white);
     border-radius: 2vmin;
@@ -9,6 +10,14 @@
     background-repeat: no-repeat; /* Prevent background image from repeating */
     background-size: cover; /* Optionally, scale the background image to cover the container */
     background-position: center; /* Optionally, center the background image */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    padding: 1vmin;
+  }
+
+  .forms {
+    display: flex;
+    flex-direction: column; /* Stack forms vertically */
+    align-self: flex-end; /* Align the forms to the top-right corner */
   }
   
   .AuthPage h3 {
@@ -16,11 +25,12 @@
     text-align: center;
     color: var(--text-light);
     cursor: pointer;
+    font-family: Comfortaa,cursive;
   }
 
   .AuthPage h1 {
     color: var(--white);
     font-size: 60px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Comfortaa,cursive;
 
   }

@@ -6,7 +6,7 @@
     color: var(--text-light);
     background-color: var(--white);
     border-top: .1vmin solid var(--tan-3);
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     }
     
     .LineItem:last-child {

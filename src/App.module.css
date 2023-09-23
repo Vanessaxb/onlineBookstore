@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
 .App {
+  
   height: 100%;
+  font-family: Comfortaa,cursive;
 }
 
 

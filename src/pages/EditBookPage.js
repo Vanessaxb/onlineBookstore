@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { update, getById } from "../utilities/items-api";
 import * as categoryApi from "../utilities/category-api";
 import { useParams, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 
 export default function EditBookForm({ setUser }) {
@@ -41,7 +42,16 @@ export default function EditBookForm({ setUser }) {
     try {
       // Update the book data
       const updatedBook = await update(id, bookFormData);
-      // setUser(updatedBook);
+      toast.success('Book Upated Successfuly!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
       navigate("/orders/new");
     } catch (error) {
       console.log(error);

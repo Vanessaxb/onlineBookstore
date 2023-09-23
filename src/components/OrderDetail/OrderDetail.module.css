@@ -1,11 +1,14 @@
 .OrderDetail {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 3vmin;
-    font-size: 2vmin;
-    color: var(--text-light);
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align at the bottom vertically */
+  align-items: center; /* Center horizontally */
+  padding: 3vmin;
+  font-size: 2vmin;
+  color: var(--text-light);
+  height: 100vh; /* Make the container take up the entire viewport height */
+  position: relative; /* Add this for absolute positioning of "read a book a week!" */
+}
   
   .OrderDetail .sectionHeading {
     width: 100%
@@ -13,6 +16,7 @@
   
   .OrderDetail .lineItemContainer {
     margin-top: 3vmin;
+    padding-left: 0.8vmin;
     justify-content: flex-start;
     height: calc(100vh - 18vmin);
     width: 100%;
@@ -42,6 +46,9 @@
   
   .OrderDetail .hungry {
     position: absolute;
-    top: 50vh;
+    bottom: 50vmin; /* Adjust this value as needed */
     font-size: 2vmin;
+    text-align: center; /* Center text horizontally */
+    width: 100%; /* Make sure it spans the entire width */
+    color: var(--text-light);
   }

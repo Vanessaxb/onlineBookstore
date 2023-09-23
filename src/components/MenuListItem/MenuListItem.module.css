@@ -8,13 +8,13 @@
     margin-bottom: -1.6vmin;
     padding: 2vmin;
     color: var(--text-light);
-    background-color: var(--white);
+    background-color: var(--tan-4);
     border: .1vmin solid var(--tan-3);
     border-radius: 1vmin;
-    font-size: 4vmin;
+    font-size: 2vmin;
   }
   
-  .MenuListItem .emoji {
+  .MenuListItem .image {
     height: 8vw;
     width: 8vw;
     font-size: 4vw;
@@ -25,18 +25,27 @@
   
   .MenuListItem .buy {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
   }
   
   .MenuListItem .buy span {
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     text-align: center;
     color: var(--text-light);
     margin-top: 1vw;
   }
   
   .MenuListItem .name {
-    font-size: 2vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    text-align: center;
+    color: var(--blue);
+    margin-top: 1vmin;
+  }
+
+  .MenuListItem .author {
+    font-size: 1.1vw;
     text-align: center;
     color: var(--text-light);
+    margin-top: 1vmin;
   }
