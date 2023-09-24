@@ -86,7 +86,7 @@ export default function EditUsersPage() {
             <input
               type="checkbox"
               name="isAdmin"
-              defaultValue={userFormData?.isAdmin ? "true" : "false"}
+              defaultValue={userFormData?.isAdmin ? "false" : "true"}
               onChange={handleChange}
             />
             </div>

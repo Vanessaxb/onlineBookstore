@@ -1,21 +1,23 @@
 :root {
-  --white: #FFFFFF;
+  --white: #ffffff;
   --purple-1: #7310ad;
   --purple-2: #a90ada;
-  --tan-3: #FFFFFF;
+  --tan-3: #ffffff;
   --tan-4: #f8f4f4;
-  --blue: #F67F00;
+  --blue: #f67f00;
   --text-light: #57146f;
   --text-dark: #be380b;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: Comfortaa,cursive;
+  font-family: Comfortaa, cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--white);
@@ -24,7 +26,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -68,17 +70,17 @@ code {
   align-items: center;
   background-color: var(--tan-1);
   color: var(--text-dark);
-  border: .1vmin solid var(--tan-3);
+  border: 0.1vmin solid var(--tan-3);
   border-radius: 1vmin;
-  padding: .6vmin;
+  padding: 0.6vmin;
   text-align: center;
   font-size: 2vmin;
 }
 
 .form-container {
-  padding: 3vmin;  
+  padding: 3vmin;
   background-color: rgba(255, 255, 255, 0.5); /*background tranparetn white*/
-  border: .1vmin solid var(--purple-1);
+  border: 0.1vmin solid var(--purple-1);
   border-radius: 1vmin;
   /* margin-left: 20mvin; */
 }
@@ -95,22 +97,20 @@ form {
   color: var(--text-light);
   display: flex;
   flex-direction: column; /* Stack forms vertically */
-  align-self: flex-end; 
-  max-width: 60%; 
+  align-self: flex-end;
+  max-width: 60%;
   margin-top: 4vmin;
   margin-left: 20vmin;
-  padding: 2vmin; 
+  padding: 2vmin;
   background-color: var(--tan-4); /*background tranparetn white*/
-  border: .1vmin solid var(--tan-3);
+  border: 0.1vmin solid var(--tan-3);
   border-radius: 1vmin;
 }
 
 form * {
   font-weight: bold; /* Make all text elements inside the form bold */
   font-size: 1.4em !important;
-  
 }
-
 
 label {
   font-size: 2vmin;
@@ -121,8 +121,8 @@ label {
 input {
   padding: 1vmin;
   font-size: 2vmin;
-  border: .1vmin solid var(--blue);
-  border-radius: .5vmin;
+  border: 0.1vmin solid var(--blue);
+  border-radius: 0.5vmin;
   color: var(--text-dark);
   outline: var(--tan-1);
 }
@@ -137,7 +137,8 @@ input:focus {
   align-items: center; /* Vertically align the checkbox and label */
 }
 
-button, a.button {
+button,
+a.button {
   margin: 1vmin;
   padding: 1vmin;
   color: var(--white);
@@ -146,15 +147,15 @@ button, a.button {
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
-  border-radius: .5vmin;
+  border: 0.1vmin solid var(--tan-2);
+  border-radius: 0.5vmin;
   outline: none;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 button.btn-sm {
   font-size: 1.5vmin;
-  padding: .6vmin .8vmin;
+  padding: 0.6vmin 0.8vmin;
 }
 
 .adminButtons {
@@ -173,18 +174,41 @@ button.btn-sm {
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  border: .1vmin solid var(--tan-2);
-  border-radius: .5vmin;
+  border: 0.1vmin solid var(--tan-2);
+  border-radius: 0.5vmin;
   outline: none;
-  cursor: pointer;  
+  cursor: pointer;
+}
+.adminButtons2 {
+  display: flex; /* Make the buttons flex container */
+  justify-content: left; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+  margin-top: -6vmin;
+  margin-left: 18vmin;
+}
+
+.adminButtons2 .btn-sma2 {
+  margin: 1vmin;
+  padding: 1vmin;
+  color: var(--white);
+  background-color: var(--purple-1);
+  font-size: 1.3vmin;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border: 0.1vmin solid var(--tan-2);
+  border-radius: 0.5vmin;
+  outline: none;
+  cursor: pointer;
 }
 
 button.btn-xs {
   font-size: 1vmin;
-  padding: .4vmin .5vmin;
+  padding: 0.4vmin 0.5vmin;
 }
 
-button:disabled, form:invalid button[type="submit"] {
+button:disabled,
+form:invalid button[type="submit"] {
   cursor: not-allowed;
   background-color: var(--tan-4);
 }
@@ -193,4 +217,3 @@ button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }
-

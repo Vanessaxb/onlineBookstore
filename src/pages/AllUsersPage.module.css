@@ -1,15 +1,21 @@
-/* AllUsersPage.module.css */
 .AllUsersPage {
-    padding: 3vmin;
-    color: var(--purple-1);
-  }
-  
-  .AllUsersPage h1 {
-    font-size: 3vmin;
-    margin-bottom: 2vmin;
-    color: var(--blue);
-  }
+  padding: 3vmin;
+  color: var(--purple-1);
+  color: var(--blue);
+  font-size: 2vmin;
+}
 
-  
-  
-  
+.AllUsersPage h1 {
+  font-size: 3vmin;
+  margin-bottom: 2vmin;
+  color: var(--blue);
+  color: var(--purple-1);
+}
+
+.AllUsersPage .userItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+
