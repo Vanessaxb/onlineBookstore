@@ -27,19 +27,21 @@
   font-size: 4vmin;
   font-family: Comfortaa, cursive;
   margin-top: -4vmin;
-  /* margin-right: -50vmin; */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  background-color: rgba(240, 248, 255, 0.8); /* Adjust the color and opacity as needed */
+  background-color: rgba(227, 136, 18, 0.4); /* Adjust the color and opacity as needed */
   position: fixed;
   top:60%;
   right: 0;
-  bottom: 10;
+  bottom: 20;
   left: 100vmin; /* Adjust this value to control the width of the background */
   z-index: 0; /* Place the background behind other content */
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2%;
 }
 
-/* .AuthPage div {
-    margin-left: 10vmin;
-  } */
+.TitleContainer h1 {
+  margin: 0;
+}
