@@ -1,36 +1,45 @@
 .AuthPage {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--white);
-    border-radius: 2vmin;
-    background-image: url('../images/libraryBackground.jpeg');
-    background-repeat: no-repeat; /* Prevent background image from repeating */
-    background-size: cover; /* Optionally, scale the background image to cover the container */
-    background-position: center; /* Optionally, center the background image */
-    overflow-x: hidden; /* Hide horizontal overflow */
-    padding: 1vmin;
-  }
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 2vmin;
+  background-image: url("../images/libraryBackground.jpeg");
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  background-size: cover; /* Optionally, scale the background image to cover the container */
+  background-position: center; /* Optionally, center the background image */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  padding: 1vmin;
+}
 
-  .forms {
-    display: flex;
-    flex-direction: column; /* Stack forms vertically */
-    align-self: flex-end; /* Align the forms to the top-right corner */
-  }
-  
-  .AuthPage h3 {
-    margin-top: 4vmin;
-    text-align: center;
-    color: var(--text-light);
-    cursor: pointer;
-    font-family: Comfortaa,cursive;
-  }
+.AuthPage h3 {
+  margin-top: 4vmin;
+  text-align: center;
+  color: var(--text-light);
+  cursor: pointer;
+  font-family: Comfortaa, cursive;
+}
 
-  .AuthPage h1 {
-    color: var(--white);
-    font-size: 60px;
-    font-family: Comfortaa,cursive;
+.TitleContainer {
+  color: var(--white);
+  font-size: 4vmin;
+  font-family: Comfortaa, cursive;
+  margin-top: -4vmin;
+  /* margin-right: -50vmin; */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(240, 248, 255, 0.8); /* Adjust the color and opacity as needed */
+  position: fixed;
+  top:60%;
+  right: 0;
+  bottom: 10;
+  left: 100vmin; /* Adjust this value to control the width of the background */
+  z-index: 0; /* Place the background behind other content */
+  display: flex;
+  justify-content: flex-end;
+}
 
-  }
+/* .AuthPage div {
+    margin-left: 10vmin;
+  } */

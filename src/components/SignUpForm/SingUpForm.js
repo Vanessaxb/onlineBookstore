@@ -51,9 +51,9 @@ function SignUpForm({setUser}) {
   };
 
   return (
-    <div>
-      <div className="form-container">
-        <form autoComplete="off" onSubmit={handleSubmit}>
+    
+      <div className="AuthFormContainer">
+        <form autoComplete="off" onSubmit={handleSubmit} className="AuthForm">
           <label>Name</label>
           <input type="text" name="name" value={formData.name} onChange={handleChange} required/>
 
@@ -65,10 +65,11 @@ function SignUpForm({setUser}) {
 
           <label>Confirm Password</label>
           <input type="password" name="confirm" value={formData.confirm} onChange={handleChange} required />
-
-          <button disabled={disable} type="submit">Sign Up</button>
+          {/* <div className="AuthButton"> */}
+          <button disabled={disable} type="submit" >Sign Up</button>
+          {/* </div> */}
         </form>
-      </div>
+     
       <p className="error-message">{formData.error}</p>
     </div>
   );

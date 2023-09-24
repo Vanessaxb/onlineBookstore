@@ -5,6 +5,7 @@
   --tan-3: #ffffff;
   --tan-4: #f8f4f4;
   --blue: #f67f00;
+  --blue-2: #f4bd82;
   --text-light: #57146f;
   --text-dark: #be380b;
 }
@@ -77,13 +78,13 @@ code {
   font-size: 2vmin;
 }
 
-.form-container {
-  padding: 3vmin;
-  background-color: rgba(255, 255, 255, 0.5); /*background tranparetn white*/
-  border: 0.1vmin solid var(--purple-1);
-  border-radius: 1vmin;
-  /* margin-left: 20mvin; */
-}
+/* .form-container { 
+padding: 3vmin; 
+background-color: rgba(255, 255, 255, 0.5);  
+border: 0.1vmin solid var(--purple-1);
+border-radius: 1vmin; 
+margin-left: 40mvin;
+}  */
 
 p.error-message {
   color: var(--blue);
@@ -95,6 +96,7 @@ form {
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
   color: var(--text-light);
+  color: var(--white);
   display: flex;
   flex-direction: column; /* Stack forms vertically */
   align-self: flex-end;
@@ -102,10 +104,58 @@ form {
   margin-top: 4vmin;
   margin-left: 20vmin;
   padding: 2vmin;
-  background-color: var(--tan-4); /*background tranparetn white*/
+  background-color: var(--tan-4);
+  background-color: hsl(280, 76%, 41%);
   border: 0.1vmin solid var(--tan-3);
   border-radius: 1vmin;
 }
+
+.AuthForm {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.25vmin;
+  /* color: var(--text-light); */
+  color: var(--white);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-self: flex-start;
+  background-color: hsl(260, 76%, 42%);
+  margin-top: -5vmin;
+  margin-left: 50vmin;
+} 
+
+/* div.AuthFormCointainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.25vmin;
+  color: var(--white);
+  color: var(--text-light);
+  display: flex;
+  flex-direction: column; 
+  align-self: flex-end;
+  background-color: hsl(260, 76%, 42%);
+  margin-left: 30vmin;
+}  */
+
+.AuthButton {
+  margin: 1vmin;
+  padding: 1vmin;
+  margin-left: 5vmin;
+  color: var(--white);
+  background-color: var(--blue);
+  font-size: 2vmin;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border: 0.1vmin solid var(--tan-2);
+  border-radius: 0.5vmin;
+  outline: none;
+  cursor: pointer;
+  margin-left: 30vmin;
+  margin-top: 2vmin;
+
+} 
 
 form * {
   font-weight: bold; /* Make all text elements inside the form bold */
@@ -140,6 +190,7 @@ input:focus {
 button,
 a.button {
   margin: 1vmin;
+  /* margin-left: 50vmin; */
   padding: 1vmin;
   color: var(--white);
   background-color: var(--blue);
@@ -210,10 +261,12 @@ button.btn-xs {
 button:disabled,
 form:invalid button[type="submit"] {
   cursor: not-allowed;
-  background-color: var(--tan-4);
+  background-color: var(--blue-2);
 }
 
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }
+
+

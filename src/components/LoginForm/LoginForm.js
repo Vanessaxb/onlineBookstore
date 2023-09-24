@@ -29,8 +29,8 @@ async function handleSubmit(evt) {
 
 return (
   <div>
-    <div className="form-container">
-      <form autoComplete="off" onSubmit={handleSubmit}>
+    <div className="AuthFormCointainer">
+      <form autoComplete="off" onSubmit={handleSubmit} className="AuthForm">
         <label>Email</label>
         <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
         <label>Password</label>
