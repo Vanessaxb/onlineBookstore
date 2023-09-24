@@ -78,13 +78,6 @@ code {
   font-size: 2vmin;
 }
 
-/* .form-container { 
-padding: 3vmin; 
-background-color: rgba(255, 255, 255, 0.5);  
-border: 0.1vmin solid var(--purple-1);
-border-radius: 1vmin; 
-margin-left: 40mvin;
-}  */
 
 p.error-message {
   color: var(--blue);

@@ -8,6 +8,7 @@ import EditBookPage from './pages/EditBookPage'
 import MenuListItem from './components/MenuListItem/MenuListItem';
 import AllUsersPage from './pages/AllUsersPage'
 import EditUsersPage from './pages/EditUsersPage';
+import Footer from './components/Footer/Footer.js'
 
 
 import OrderHIstoryPage from './pages/OrderHistoryPage';
@@ -34,8 +35,6 @@ function App() {
       <NavBar user={user} setUser={setUser}/>
         <Routes>
 
-          {/* <Route path='/orders/new' element={<HomePage user={user} setUser={setUser}/>}/> */}
-          
           <Route path='/orders/new' element={<NewOrderPage user={user} setUser={setUser}/>}/>
 
           <Route path='/orders' element={<OrderHIstoryPage user={user} setUser={setUser}/>}/>
@@ -47,20 +46,19 @@ function App() {
           <Route path='/users/:id/update' element={<EditUsersPage user={user} setUser={setUser}/>}/>
 
           <Route path='/items/:id/update' element={<EditBookPage  setUser={setUser}/>}/>
+           
+          <Route path="/*" element={<Navigate to="/orders/new" />} />
 
-           {/* redirect to /orders/new if path in address bar hasn't matched a <Route> above */}
-           <Route path="/*" element={<Navigate to="/orders/new" />} />
-
-          {/* <Route path='/orders/new' element={<MenuList user={user} setUser={setUser}/>}/> */}
-          {/* <Route path='/items/:id/' element={<MenuListItem  setUser={setUser}/>}/> */}
         </Routes>
         
         </>
 
         : <AuthPage setUser={setUser}/> }
       
+      <Footer/>
       <ToastContainer/>
     </main>
+    
   );
 }
 

@@ -1,0 +1,36 @@
+.footer-container {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    max-height: 35vmin;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem; Adjust the padding as needed */
+    background-color: #333; /* Add background color */
+    color: #fff; /* Text color */
+    padding: 3rem 10rem;
+  }
+
+  .footer-list {
+      padding: 0;
+      list-style: none;
+  }
+  
+  .footer-list p {
+      color: rgb(162, 159, 159);
+      cursor: pointer;
+  }
+  
+  .footer-list p:hover
+  {
+      color: white;
+  }
+
+  .footer-list a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .footer-list a:hover {
+    color: #fff;
+  }

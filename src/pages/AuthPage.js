@@ -9,9 +9,9 @@ function AuthPage({ setUser }) {
 
   return (
     <main className={styles.AuthPage}>
-      <div className={styles.TitleContainer}>
+      {/* <div className={styles.TitleContainer}>
         <h1>Beattie BookStore</h1>
-      </div>
+      </div> */}
       <div className={styles.AuthForm}>
         <button onClick={() => setShowLogin(!showLogin)} className="AuthButton">
           {showLogin ? "Sign up" : "Log in"}
