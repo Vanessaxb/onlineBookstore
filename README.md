@@ -1,6 +1,8 @@
 # Full Stack ONLINE BOOKSTORE Project using MERN
 
-Live Link - [Beattie BookStore](https://online-bookstore-qja6.onrender.com)
+Render Live Version - [Beattie BookStore](https://online-bookstore-qja6.onrender.com)
+
+### GitHub Live Version: (https://vanessaxb.github.io/OnlineBookstore/)
 
 ## Available Scripts
 
@@ -12,7 +14,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
-## Technologies used 
+## Technologies Used:
 1. HTML               
 2. CSS
 3. JavaScript
@@ -21,7 +23,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 6. Express JS
 7. MongoDb
 8. Render
-9. XXX for Backend server deplyment.
+
+![alt text](./src/images/Architecture.png "Architecture")
+
 
 ## Features:
 1. User Authentication (Signup, Login and Logout)
@@ -38,6 +42,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 10. Stripe payment Integration (to be implemented)
 11. Custom Toast Component with 4 types - Success, Error, Warning and Information (to be implemented)
 
+## Future Enhancements: 
+- Filter books by Author, Reviews and Price
+
 ## Trello Board
 ![alt text](./src/images/TrelloBoard.png "Trello Board")
 
@@ -52,14 +59,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ## Screenshots
 
 ### Home Page
-![alt text](./src/images/WireFrame.png "SignUP/LogIn Page")
+![alt text](./src/images/AuthPage.png "SignUP/LogIn Page")
 
 ### Product Listing Page
 ![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-ProductListingPage-1.PNG)
 
 ### User Authentication Pages
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-SignupPage-1.PNG)
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-LoginPage-1.PNG)
+![alt text](./src/images/UpdateUserForm.png "Update User Page")
 
 ### Single Product Page
 ![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-SingleProductPage-1.PNG)
