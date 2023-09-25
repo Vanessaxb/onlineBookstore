@@ -1,8 +1,8 @@
-# Full Stack ONLINE BOOKSTORE Project using MERN
+# Full Stack ONLINE BOOKSTORE Application using MERN
 
-Render Live Version - [Beattie BookStore](https://online-bookstore-qja6.onrender.com)
+## Live Version - [Beattie BookStore](https://online-bookstore-qja6.onrender.com)
 
-### GitHub Live Version: (https://vanessaxb.github.io/OnlineBookstore/)
+## MERN Infrastructure
 
 ![alt text](./src/images/mern-infrastructure.png "MERN Infrastructure")
 
@@ -73,12 +73,17 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### Orders History Page
 ![alt text](./src/images/OrderHistoryPage.png "Orders History Page")
 
+### Create New Book Page
+![alt text](./src/images/CreateNewBookPage.png "Create New Book Page")
+
+### Update Book Page
+![alt text](./src/images/UpdateBookForm.png "Create New Book Page")
+
 ### All Users Page
 ![alt text](./src/images/AllUsersPage.png "All Users Page")
 
 ### Update User Page
 ![alt text](./src/images/UpdateUserForm.png "Update User Page")
 
-### Create New Book Page
-![alt text](./src/images/CreateNewBookPage.png "Create New Book Page")
+
 
