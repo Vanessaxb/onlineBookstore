@@ -1,4 +1,4 @@
-# Full Stack ONLINE BOOKSTORE Application using MERN
+# Full Stack Single Page ONLINE BOOKSTORE Application using MERN
 
 ## Live Version - [Beattie BookStore](https://online-bookstore-qja6.onrender.com)
 

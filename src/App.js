@@ -44,11 +44,11 @@ function App() {
           
           <Route path='/items/new' element={<CreateBookPage user={user} setUser={setUser}/>}/>
 
+          <Route path='/items/:id/update' element={<EditBookPage  setUser={setUser}/>}/>
+          
           <Route path='/users' element={<AllUsersPage user={user} setUser={setUser}/>}/>
 
           <Route path='/users/:id/update' element={<EditUsersPage user={user} setUser={setUser}/>}/>
-
-          <Route path='/items/:id/update' element={<EditBookPage  setUser={setUser}/>}/>
            
           <Route path="/*" element={<Navigate to="/orders/new" />} />
 
