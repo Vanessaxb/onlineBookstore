@@ -6,15 +6,6 @@
 
 ![alt text](./src/images/mern-infrastructure.png "MERN Infrastructure")
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 
 ## Technologies Used:
 1. HTML               
@@ -27,7 +18,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 8. Render
 
 ![alt text](./src/images/Architecture.png "Architecture")
-
 
 ## Features:
 1. User token-based Authentication (Signup, Login and Logout) 
@@ -42,6 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 8. History Order Summary 
 9. Admin can update/delete User and also create/update/delete Book
 10. Custom Toast Component with 4 types - Success, Error, Warning and Information 
+
 
 ## Future Enhancements: 
 - Filter books by Author, Reviews and Price

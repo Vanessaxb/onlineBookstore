@@ -13,7 +13,6 @@ export default function AllUsersPage({ user }) {
   const handleDelete = async (user) => {
     try {
       await remove(user);
-      // navigate('/users', { replace: true })
       window.location.reload();
     } catch (error) {
       console.error("Error deleting user:", error);
