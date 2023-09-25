@@ -45,39 +45,42 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ## Future Enhancements: 
 - Filter books by Author, Reviews and Price
 
+
 ## Trello Board
 ![alt text](./src/images/TrelloBoard.png "Trello Board")
+
 
 ## WireFrame
 ![alt text](./src/images/WireFrame1.png "WireFrame")
 
 ![alt text](./src/images/WireFrame2.png "WireFrame")
 
+
 ## Entity Relationship Diagram (ERD)
 ![alt text](./src/images/EDR.png "EDR")
+
 
 ## Screenshots
 
 ### Home Page
 ![alt text](./src/images/AuthPage.png "SignUP/LogIn Page")
 
-### Product Listing Page
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-ProductListingPage-1.PNG)
+### New Orders Page
+![alt text](./src/images/NewOrdersPage.png "New Orders Page")
 
 ### User Authentication Pages
 ![alt text](./src/images/UpdateUserForm.png "Update User Page")
 
 ### Single Product Page
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-SingleProductPage-1.PNG)
+
 
 ### Wishlist Page
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-WishlistPage-1.PNG)
+
 
 ### Cart Page
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-CartPage-1.PNG)
+
 
 ### Razorpay integration
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-Razorpay_Payment_Integration.PNG)
+
 
 ### Orders Page
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-OrdersPage-1.PNG)
