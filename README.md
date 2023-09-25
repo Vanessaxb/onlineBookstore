@@ -1,6 +1,6 @@
 # Full Stack ONLINE BOOKSTORE Project using MERN
 
-Live Link - [Beattie BookStore](https://bookztron-dev-branch.netlify.app/)
+Live Link - [Beattie BookStore](https://online-bookstore-qja6.onrender.com)
 
 ## Available Scripts
 
@@ -11,68 +11,48 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ## Technologies used 
-1. HTML
+1. HTML               
 2. CSS
 3. JavaScript
 4. React
-
-- Node JS, Express JS and MongoDb is used for Backend server which is deployed on Vercel.
+5. Node JS
+6. Express JS
+7. MongoDb
+8. Render
+9. XXX for Backend server deplyment.
 
 ## Features:
 1. User Authentication (Signup, Login and Logout)
-2. Proper Landing page with categories and New Arrivals
-3. Product Listing Page
-4. Sort and filter products
-   - Sort by Price Low to High and High to Low
-   - Filter using Minimum and Maximum Price Range
-   - Filter by Book Genre Categories
-   - Filter by average product rating
-   - Filter to include/exclude out of stock products
-   - Filter products as per fast delivery availability
-   - Clear all filters
-5. Wishlist Management 
-   - Add / remove from the wishlist
-   - Add items to cart
-6. Cart Management 
+2. Navigation responding to the login status of the user
+3. New Orders Product Listing Page
+4. Filter by Book Genre Categories   
+5. Cart Management 
    - Add to cart 
    - Change items quantity in cart 
-   - Remove from cart
-   - Add to wishlist from cart
-   - Apply Coupon
+   - Remove from cart   
 7. Single Product Page
-8. Order Summary of the ordered items
-9. Custom Toast Component with 4 types - Success, Error, Warning and Information
-10. Razorpay payment Integration
-11. Orders page
-12. Search bar to search books by Book name and Author name
-13. Pagination 
+8. History Order Summary 
+9. Admin can update/delete User and also create/update/delete Book
+10. Stripe payment Integration (to be implemented)
+11. Custom Toast Component with 4 types - Success, Error, Warning and Information (to be implemented)
 
-## You are welcome to contribute to this project 
-1. Create a personal fork of the project on Github.
-2. Clone the fork on your local machine. Your remote repo on Github is called origin.
-3. Add the original repository as a remote called upstream.
-4. If you created your fork a while ago be sure to pull upstream changes into your local repository.
-5. Create a new branch to work on! Branch from development branch.
-6. Implement/fix your feature, comment your code.
-7. Squash your commits into a single commit with git's interactive rebase. Create a new branch if necessary.
-8. Push your branch to your fork on Github, the remote origin.
-9. From your fork open a pull request in the correct branch. Target the project's development branch.
-10. Once the pull request is approved and merged you can pull the changes from upstream to your local repo and delete your extra branch(es).
-11. And last but not least: Always write your commit messages in the present tense. Your commit message should describe what the commit, when applied, does to the code – not what you did to the code.
+## Trello Board
+![alt text](./src/images/TrelloBoard.png "Trello Board")
 
-## You can report issues on this project using Github issue 
-1. You can read more about this from [Github Docs](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue)
+## WireFrame
+![alt text](./src/images/WireFrame1.png "WireFrame")
+
+![alt text](./src/images/WireFrame2.png "WireFrame")
+
+## Entity Relationship Diagram (ERD)
+![alt text](./src/images/EDR.png "EDR")
 
 ## Screenshots
 
 ### Home Page
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-HomePage-1.PNG)
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-HomePage-2.PNG)
-![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-HomePage-3.PNG)
+![alt text](./src/images/WireFrame.png "SignUP/LogIn Page")
 
 ### Product Listing Page
 ![](https://github.com/Naman-Saxena1/Bookztron-E-Commerce_Book_Store/blob/development/src/Assets/Screenshots/Bookztron-ProductListingPage-1.PNG)
