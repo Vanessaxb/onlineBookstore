@@ -4,6 +4,8 @@ Render Live Version - [Beattie BookStore](https://online-bookstore-qja6.onrender
 
 ### GitHub Live Version: (https://vanessaxb.github.io/OnlineBookstore/)
 
+![alt text](./src/images/mern-infrastructure.png "MERN Infrastructure")
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -80,14 +82,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### Create New Book Page
 ![alt text](./src/images/CreateNewBookPage.png "Create New Book Page")
 
-
-### Wishlist Page
-
-
-### Cart Page
-
-
-### Razorpay integration
-
-
-### Orders Page
