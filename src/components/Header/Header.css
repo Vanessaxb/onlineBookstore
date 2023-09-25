@@ -5,3 +5,7 @@
     color: var(--purple-1);
 }
 
+.header-container.orange-bg {
+    background-color: rgb(238, 175, 58); 
+  }
+

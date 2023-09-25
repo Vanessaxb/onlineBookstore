@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer.js'
 
 
 import OrderHIstoryPage from './pages/OrderHistoryPage';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import { getUser } from './utilities/users-service';
 import styles from './App.module.css';
 import MenuList from './components/MenuList/MenuList';
@@ -20,6 +20,7 @@ import MenuList from './components/MenuList/MenuList';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header/Header';
+
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
   
   return (
     <main className={styles.App}>
-      <Header/>
+       <Header className={user ? 'header-container orange-bg' : 'header-container'} />
 
       {user ? 
       <>

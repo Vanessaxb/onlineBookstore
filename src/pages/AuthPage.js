@@ -2,6 +2,7 @@ import { useState } from "react";
 import SignUpForm from "../components/SignUpForm/SingUpForm";
 import LoginForm from "../components/LoginForm/LoginForm";
 import styles from "./AuthPage.module.css";
+// import Header from '../components/Header/Header.js'
 
 
 function AuthPage({ setUser }) {
@@ -9,9 +10,7 @@ function AuthPage({ setUser }) {
 
   return (
     <main className={styles.AuthPage}>
-      {/* <div className={styles.TitleContainer}>
-        <h1>Beattie BookStore</h1>
-      </div> */}
+      {/* <Header/> */}
       <div className={styles.AuthForm}>
         <button onClick={() => setShowLogin(!showLogin)} className="AuthButton">
           {showLogin ? "Sign up" : "Log in"}

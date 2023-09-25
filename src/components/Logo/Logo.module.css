@@ -5,18 +5,19 @@
     flex-direction: column;
     justify-content: top;
     align-items: center;
-    padding-top: 10px;
+    padding-top: 2.5vmin;
     border-radius: 50%;
     background-image: url('../../images/libraryBackground.jpeg');
-    color: var(--tan-1);
+    color: var(--white);
     font-size: 2.7vmin;
+    font-weight: bold;
     border: .6vmin solid var(--tan-2);
     position: relative;
     z-index: 2;    
-    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
-    Create a transparent purple background layer
+    /*Create a transparent purple background layer*/
     .LogoText {
         background-color: rgba(128, 0, 128, 0.5); /* Transparent purple background for text */
         padding: 10px; /* Adjust padding as needed */

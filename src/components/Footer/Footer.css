@@ -2,7 +2,7 @@
     display: grid; 
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    max-height: 35vmin;
+    min-height: 25vmin;
     justify-content: center;
     align-items: center;
     /* padding: 1rem; Adjust the padding as needed */
