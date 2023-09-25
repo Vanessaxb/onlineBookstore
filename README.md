@@ -22,14 +22,14 @@
 ## Features:
 1. User token-based Authentication (Signup, Login and Logout) 
 2. Navigation responding to the login status of the user
-3. New Orders Product Listing Page
+3. New Orders Product Page
 4. Filter by Book Genre Categories   
 5. Cart Management 
    - Add to cart 
    - Change items quantity in cart 
    - Remove from cart   
-7. Single Product Page
-8. History Order Summary 
+7. History Order Summary 
+8. Accepts more than one Admin 
 9. Admin can update/delete User and also create/update/delete Book
 10. Custom Toast Component with 4 types - Success, Error, Warning and Information 
 
