@@ -31,8 +31,8 @@ function App() {
   
   return (
     <main className={styles.App}>
-       <Header className={user ? 'header-container orange-bg' : 'header-container'} />
-
+       <Header showHeader={!user} />
+       
       {user ? 
       <>
       <NavBar user={user} setUser={setUser}/>

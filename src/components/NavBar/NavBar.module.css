@@ -4,23 +4,22 @@
     text-align: left;
     /* font-family: 'Comic Sans MS', cursive !important;  */
     color: var(--blue);
-    font-size: 3vmin;
+    font-size: 2.2vmin;
     
   }
   
-  /* .navbar-title h2 {
-    font-size: 24px;
-    /* margin-bottom: 4vmin; */
+  .navbar-title h2 {
+    /* font-size: 5vmin; */
+    margin-bottom: 4vmin;
     padding-left: 2vmin;
-    /* position: fixed; */
-  /* }  */
+    position: fixed;
+  } 
   
   .navbar-link {
     text-decoration: none;
     font-weight: bold;
     color: #333; /* Dark gray text color */
+    /* font-size: 2vmin; */
   }
   
-  .navbar-link:hover {
-    color: #FF1493; /* Highlight link color on hover */
-  }
+  
