@@ -39,11 +39,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 7. Single Product Page
 8. History Order Summary 
 9. Admin can update/delete User and also create/update/delete Book
-10. Stripe payment Integration (to be implemented)
-11. Custom Toast Component with 4 types - Success, Error, Warning and Information (to be implemented)
+10. Custom Toast Component with 4 types - Success, Error, Warning and Information 
 
 ## Future Enhancements: 
 - Filter books by Author, Reviews and Price
+- Stripe payment Integration 
 
 
 ## Trello Board
@@ -68,10 +68,11 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### New Orders Page
 ![alt text](./src/images/NewOrdersPage.png "New Orders Page")
 
-### User Authentication Pages
+### Update User Page
 ![alt text](./src/images/UpdateUserForm.png "Update User Page")
 
-### Single Product Page
+### Create NEw Book Page
+![alt text](./src/images/CreateNewBookPage.png "Create New Book Page")
 
 
 ### Wishlist Page

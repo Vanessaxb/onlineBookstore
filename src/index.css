@@ -96,6 +96,7 @@ form {
   max-width: 60%;
   margin-top: 4vmin;
   margin-left: 20vmin;
+  margin-bottom: 6vmin;
   padding: 2vmin;
   background-color: var(--tan-4);
   background-color: hsl(280, 76%, 41%);
