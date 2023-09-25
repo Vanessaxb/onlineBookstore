@@ -19,6 +19,7 @@ import MenuList from './components/MenuList/MenuList';
 
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Header from './components/Header/Header';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
   
   return (
     <main className={styles.App}>
+      <Header/>
 
       {user ? 
       <>
