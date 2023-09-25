@@ -66,12 +66,18 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ![alt text](./src/images/AuthPage.png "SignUP/LogIn Page")
 
 ### New Orders Page
-![alt text](./src/images/NewOrdersPage.png "New Orders Page")
+![alt text](./src/images/NewOrderPage.png "New Orders Page")
+
+### Orders History Page
+![alt text](./src/images/OrderHistoryPage.png "Orders History Page")
+
+### All Users Page
+![alt text](./src/images/AllUsersPage.png "All Users Page")
 
 ### Update User Page
 ![alt text](./src/images/UpdateUserForm.png "Update User Page")
 
-### Create NEw Book Page
+### Create New Book Page
 ![alt text](./src/images/CreateNewBookPage.png "Create New Book Page")
 
 
