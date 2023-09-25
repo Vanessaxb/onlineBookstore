@@ -30,7 +30,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 ## Features:
-1. User Authentication (Signup, Login and Logout)
+1. User token-based Authentication (Signup, Login and Logout) 
 2. Navigation responding to the login status of the user
 3. New Orders Product Listing Page
 4. Filter by Book Genre Categories   
