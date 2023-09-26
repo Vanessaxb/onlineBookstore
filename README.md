@@ -2,6 +2,8 @@
 
 ## Live Version - [Beattie BookStore](https://online-bookstore-qja6.onrender.com)
 
+This Application is an E-Bookstore using MERN, single page with the following features:
+
 ## MERN Infrastructure
 
 ![alt text](./src/images/mern-infrastructure.png "MERN Infrastructure")
